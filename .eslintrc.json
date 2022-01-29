@@ -14,14 +14,10 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "import",
-    "unused-imports"
-  ],
+  "plugins": ["@typescript-eslint", "import", "unused-imports"],
   "rules": {
     // あった方が良さそうなルール
-    "semi": "error",
+    "semi": ["error", "never", { "beforeStatementContinuationChars": "never" }],
     "no-console": "warn",
     "no-var": "error",
     // import 文の順序に関するルール
